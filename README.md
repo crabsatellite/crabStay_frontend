@@ -2,17 +2,24 @@
 
 Welcome to the frontend repository of CrabStay! This project is a comprehensive online accommodation booking system. The backend code can be found [here](https://github.com/crabsatellite/crabStay_backend).
 
+## Overview
+
+CrabStay is an online stay rental application based on React and Spring Boot. The frontend is designed and built using React and Ant Design, providing a dynamic and user-friendly interface. The application supports various functionalities such as browsing accommodations, viewing details, and making bookings with ease.
+
 ## Tech Stack
 
-The frontend is developed using ReactJS, providing a dynamic and user-friendly interface.
+- ReactJS
+- Ant Design
 
 ## Frontend
 
 The frontend of CrabStay is designed to be interactive and user-friendly:
 
-- **Interactive UI**: Built using ReactJS, the UI is dynamic and responsive.
+- **Home**: The landing page of the application.
 
 - **Booking System**: Users can browse accommodations, view details, and make bookings with ease.
+
+- **User Portal**: A dedicated portal for users, including a main page and an order tracking history.
 
 ## Getting Started
 
