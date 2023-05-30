@@ -74,71 +74,80 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div style={{ width: 500, margin: "20px auto" }}>
-        <Form ref={this.formRef} onFinish={this.onFinish} className="fadeIn">
-          <Form.Item
-            name="username"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Username!",
-              },
-            ]}
-          >
-            <Input
-              disabled={this.state.loading}
-              prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
-            />
-          </Form.Item>
-          <Form.Item
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: "Please input your Password!",
-              },
-            ]}
-          >
-            <Input.Password
-              disabled={this.state.loading}
-              placeholder="Password"
-            />
-          </Form.Item>
-        </Form>
-        <Space className="fadeIn">
-          <div
-            className="login_btn_checkbox"
-            style={{
-              width: 500,
-              display: "vertical",
-            }}
-          >
-            <Button
-              onClick={this.handleLogin}
-              disabled={this.state.loading}
-              shape="round"
-              type="primary"
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100%",
+        }}
+      >
+        <div style={{ width: 500, margin: "20px auto" }}>
+          <Form ref={this.formRef} onFinish={this.onFinish} className="fadeIn">
+            <Form.Item
+              name="username"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your Username!",
+                },
+              ]}
             >
-              Log in
-            </Button>
-            <Button
-              onClick={this.handleRegister}
-              disabled={this.state.loading}
-              shape="round"
-              type="primary"
+              <Input
+                disabled={this.state.loading}
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                placeholder="Username"
+              />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please input your Password!",
+                },
+              ]}
             >
-              Register
-            </Button>
-            <Checkbox
-              disabled={this.state.loading}
-              checked={this.state.asHost}
-              onChange={this.handleCheckboxOnChange}
+              <Input.Password
+                disabled={this.state.loading}
+                placeholder="Password"
+              />
+            </Form.Item>
+          </Form>
+          <Space className="fadeIn">
+            <div
+              className="login_btn_checkbox"
+              style={{
+                width: 500,
+                display: "vertical",
+              }}
             >
-              I am host!
-            </Checkbox>
-          </div>
-        </Space>
+              <Button
+                onClick={this.handleLogin}
+                disabled={this.state.loading}
+                shape="round"
+                type="primary"
+              >
+                Log in
+              </Button>
+              <Button
+                onClick={this.handleRegister}
+                disabled={this.state.loading}
+                shape="round"
+                type="primary"
+              >
+                Register
+              </Button>
+              <Checkbox
+                disabled={this.state.loading}
+                checked={this.state.asHost}
+                onChange={this.handleCheckboxOnChange}
+              >
+                I am host!
+              </Checkbox>
+            </div>
+          </Space>
+        </div>
       </div>
     );
   }
