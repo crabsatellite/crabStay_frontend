@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Button, Input, Space, Checkbox, message } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { login, register } from "../utils";
+import "./css/LoginPage.css";
 
 class LoginPage extends React.Component {
   formRef = React.createRef();
@@ -74,7 +75,7 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div style={{ width: 500, margin: "20px auto" }}>
-        <Form ref={this.formRef} onFinish={this.onFinish}>
+        <Form ref={this.formRef} onFinish={this.onFinish} className="fadeIn">
           <Form.Item
             name="username"
             rules={[
@@ -105,30 +106,39 @@ class LoginPage extends React.Component {
             />
           </Form.Item>
         </Form>
-        <Space>
-          <Checkbox
-            disabled={this.state.loading}
-            checked={this.state.asHost}
-            onChange={this.handleCheckboxOnChange}
+        <Space className="fadeIn">
+          <div
+            className="login_items"
+            // 换行展示
+            style={{
+              width: 300,
+              display: "vertical",
+            }}
           >
-            As Host
-          </Checkbox>
-          <Button
-            onClick={this.handleLogin}
-            disabled={this.state.loading}
-            shape="round"
-            type="primary"
-          >
-            Log in
-          </Button>
-          <Button
-            onClick={this.handleRegister}
-            disabled={this.state.loading}
-            shape="round"
-            type="primary"
-          >
-            Register
-          </Button>
+            <Button
+              onClick={this.handleLogin}
+              disabled={this.state.loading}
+              shape="round"
+              type="primary"
+            >
+              Log in
+            </Button>
+            <Button
+              onClick={this.handleRegister}
+              disabled={this.state.loading}
+              shape="round"
+              type="primary"
+            >
+              Register
+            </Button>
+            <Checkbox
+              disabled={this.state.loading}
+              checked={this.state.asHost}
+              onChange={this.handleCheckboxOnChange}
+            >
+              I am host!
+            </Checkbox>
+          </div>
         </Space>
       </div>
     );
