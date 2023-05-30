@@ -105,7 +105,12 @@ class LoginPage extends React.Component {
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Username"
                 size="large"
-                style={{ borderRadius: 5 }}
+                style={{
+                  padding: "10px 20px",
+                  fontSize: "18px",
+                  borderRadius: 10,
+                  opacity: 0.8,
+                }}
               />
             </Form.Item>
             <Form.Item
@@ -121,7 +126,12 @@ class LoginPage extends React.Component {
                 disabled={this.state.loading}
                 placeholder="Password"
                 size="large"
-                style={{ borderRadius: 5 }}
+                style={{
+                  padding: "10px 20px",
+                  fontSize: "18px",
+                  borderRadius: 10,
+                  opacity: 0.8,
+                }}
               />
             </Form.Item>
           </Form>
