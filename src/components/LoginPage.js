@@ -109,9 +109,8 @@ class LoginPage extends React.Component {
         <Space className="fadeIn">
           <div
             className="login_btn_checkbox"
-            // 换行展示
             style={{
-              width: 300,
+              width: 500,
               display: "vertical",
             }}
           >
