@@ -2,7 +2,6 @@ import React from "react";
 import { Form, Button, Input, Space, Checkbox, message } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { login, register } from "../utils";
-import Background from "./BackGround";
 import "./css/LoginPage.css";
 
 class LoginPage extends React.Component {
@@ -76,10 +75,6 @@ class LoginPage extends React.Component {
   render() {
     return (
       <div style={{ width: 500, margin: "20px auto" }}>
-        <Background
-          videoSource={`https://personalwebpage-videos.s3.us-east-2.amazonaws.com/crab_stay_login_background.mp4`}
-          posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_login_background_poster.jpg`}
-        />
         <Form ref={this.formRef} onFinish={this.onFinish} className="fadeIn">
           <Form.Item
             name="username"
