@@ -73,8 +73,8 @@ class App extends React.Component {
             justifyContent: "space-between",
             zIndex: 1,
             width: "100%",
-            height: "8%",
           }}
+          className="header-title"
         >
           <div
             style={{
@@ -83,9 +83,6 @@ class App extends React.Component {
               fontFamily: "brush script mt",
               fontStyle: "italic",
               color: "white",
-              marginLeft: 20,
-              marginTop: "auto",
-              marginBottom: "auto",
             }}
           >
             CrabStay
