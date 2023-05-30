@@ -97,6 +97,7 @@ class LoginPage extends React.Component {
                 disabled={this.state.loading}
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Username"
+                size="large"
               />
             </Form.Item>
             <Form.Item
@@ -111,6 +112,7 @@ class LoginPage extends React.Component {
               <Input.Password
                 disabled={this.state.loading}
                 placeholder="Password"
+                size="large"
               />
             </Form.Item>
           </Form>
@@ -127,6 +129,7 @@ class LoginPage extends React.Component {
                 disabled={this.state.loading}
                 shape="round"
                 type="primary"
+                className="login_btn"
               >
                 Log in
               </Button>
@@ -135,6 +138,7 @@ class LoginPage extends React.Component {
                 disabled={this.state.loading}
                 shape="round"
                 type="primary"
+                className="register_btn"
               >
                 Register
               </Button>
