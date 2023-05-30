@@ -21,3 +21,34 @@
 .login_btn_checkbox > * {
   margin-bottom: 10px;
 }
+
+/* Define keyframes for the slide up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to each direct child of .login_btn_checkbox */
+.login_btn_checkbox > * {
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* Specify a different animation-delay for each item */
+.login_btn_checkbox > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.login_btn_checkbox > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.login_btn_checkbox > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* ...continue for as many items as you have */
