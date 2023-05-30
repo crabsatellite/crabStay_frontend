@@ -155,8 +155,9 @@ class LoginPage extends React.Component {
                 disabled={this.state.loading}
                 checked={this.state.asHost}
                 onChange={this.handleCheckboxOnChange}
+                style={{ color: "white", fontFamily: "arial", fontSize: 15 }}
               >
-                I am host!
+                Login / Register as Host
               </Checkbox>
             </div>
           </Space>
