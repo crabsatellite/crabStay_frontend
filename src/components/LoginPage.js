@@ -82,8 +82,15 @@ class LoginPage extends React.Component {
           height: "100%",
         }}
       >
-        <div style={{ width: 500, margin: "20px auto" }}>
-          <Form ref={this.formRef} onFinish={this.onFinish} className="fadeIn">
+        <div style={{ width: 500 }}>
+          <Form
+            ref={this.formRef}
+            onFinish={this.onFinish}
+            className="fadeIn"
+            style={{
+              width: 500,
+            }}
+          >
             <Form.Item
               name="username"
               rules={[
@@ -98,6 +105,7 @@ class LoginPage extends React.Component {
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Username"
                 size="large"
+                style={{ borderRadius: 5 }}
               />
             </Form.Item>
             <Form.Item
@@ -113,6 +121,7 @@ class LoginPage extends React.Component {
                 disabled={this.state.loading}
                 placeholder="Password"
                 size="large"
+                style={{ borderRadius: 5 }}
               />
             </Form.Item>
           </Form>
