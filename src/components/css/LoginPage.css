@@ -84,3 +84,7 @@
   animation-delay: 0.3s;
 }
 /* ...continue for as many items as you have */
+
+.ant-form-item {
+  margin-bottom: 10px !important;
+}
