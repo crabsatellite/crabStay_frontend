@@ -77,8 +77,8 @@ class LoginPage extends React.Component {
     return (
       <div style={{ width: 500, margin: "20px auto" }}>
         <Background
-          videoSource="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-          posterSource="https://media.w3.org/2010/05/sintel/poster.png"
+          videoSource={`https://personalwebpage-videos.s3.us-east-2.amazonaws.com/crab_stay_login_background.mp4`}
+          posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_login_background_poster.jpg`}
         />
         <Form ref={this.formRef} onFinish={this.onFinish} className="fadeIn">
           <Form.Item
