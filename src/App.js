@@ -62,7 +62,14 @@ class App extends React.Component {
   render() {
     return (
       <Layout style={{ height: "100vh" }}>
-        <Header style={{ display: "flex", justifyContent: "space-between" }}>
+        <Header
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            zIndex: 1,
+            width: "100%",
+          }}
+        >
           <div style={{ fontSize: 16, fontWeight: 600, color: "white" }}>
             CrabStay
           </div>
