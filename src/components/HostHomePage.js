@@ -20,6 +20,7 @@ import React from "react";
 import { deleteStay, getStaysByHost, getReservationsByStay } from "../utils";
 import UploadStay from "./UploadStay";
 import Background from "./BackGround";
+import "./css/HostHomePage.css";
 
 const { TabPane } = Tabs;
 

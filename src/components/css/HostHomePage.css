@@ -1,0 +1,24 @@
+.host-home-page .ant-tabs-tab {
+  color: white;
+  font-size: medium;
+}
+
+.host-home-page .ant-tabs-tab-active {
+  color: #73c0e4 !important;
+}
+
+.host-home-page .ant-tabs-ink-bar {
+  background-color: #73c0e4 !important;
+}
+
+.host-home-page .ant-tabs-nav .ant-tabs-tab:hover {
+  color: #73c0e4 !important;
+}
+
+.host-home-page .ant-tabs-nav .ant-tabs-tab-active:hover {
+  color: #73c0e4 !important;
+}
+
+.host-home-page .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #55b6e3 !important;
+}
