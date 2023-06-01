@@ -14,3 +14,27 @@
   font-weight: 400 !important;
   border-radius: 0.2vw !important;
 }
+
+.guest-home-page .ant-tabs-tab {
+  color: white;
+}
+
+.guest-home-page .ant-tabs-tab-active {
+  color: #73c0e4 !important;
+}
+
+.guest-home-page .ant-tabs-ink-bar {
+  background-color: #73c0e4 !important;
+}
+
+.guest-home-page .ant-tabs-nav .ant-tabs-tab:hover {
+  color: #73c0e4 !important;
+}
+
+.guest-home-page .ant-tabs-nav .ant-tabs-tab-active:hover {
+  color: #73c0e4 !important;
+}
+
+.guest-home-page .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #55b6e3 !important;
+}
