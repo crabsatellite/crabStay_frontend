@@ -1,7 +1,7 @@
 .form-item-label {
   color: #ffffffef !important;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
-  font-size: 0.8vw !important;
+  font-size: 18px !important;
   font-weight: 550 !important;
 }
 
@@ -10,13 +10,14 @@
   border-color: #73c0e4 !important;
   color: #fff !important;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
-  font-size: 0.6vw !important;
+  font-size: 18px !important;
   font-weight: 400 !important;
   border-radius: 0.2vw !important;
 }
 
 .guest-home-page .ant-tabs-tab {
   color: white;
+  font-size: medium;
 }
 
 .guest-home-page .ant-tabs-tab-active {
