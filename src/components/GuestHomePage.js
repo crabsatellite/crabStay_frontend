@@ -26,6 +26,7 @@ import {
   CalendarOutlined,
 } from "@ant-design/icons";
 import { StayDetailInfoButton } from "./HostHomePage";
+import Background from "./BackGround";
 import "./css/GuestHomePage.css";
 
 const { Text } = Typography;
@@ -336,30 +337,36 @@ class SearchStays extends React.Component {
 class GuestHomePage extends React.Component {
   render() {
     return (
-      <Tabs defaultActiveKey="1" destroyInactiveTabPane={true}>
-        <TabPane
-          tab={
-            <span>
-              <SearchOutlined />
-              Search Stays
-            </span>
-          }
-          key="1"
-        >
-          <SearchStays />
-        </TabPane>
-        <TabPane
-          tab={
-            <span>
-              <CalendarOutlined />
-              My Reservations
-            </span>
-          }
-          key="2"
-        >
-          <MyReservations />
-        </TabPane>
-      </Tabs>
+      <div className="guest-home-page">
+        <Background
+          videoSource={`https://personalwebpage-videos.s3.us-east-2.amazonaws.com/crab_stay_guest_background.mp4`}
+          posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_guest_background_poster.jpg`}
+        />
+        <Tabs defaultActiveKey="1" destroyInactiveTabPane={true}>
+          <TabPane
+            tab={
+              <span>
+                <SearchOutlined />
+                Search Stays
+              </span>
+            }
+            key="1"
+          >
+            <SearchStays />
+          </TabPane>
+          <TabPane
+            tab={
+              <span>
+                <CalendarOutlined />
+                My Reservations
+              </span>
+            }
+            key="2"
+          >
+            <MyReservations />
+          </TabPane>
+        </Tabs>
+      </div>
     );
   }
 }
