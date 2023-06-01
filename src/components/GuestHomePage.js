@@ -21,6 +21,7 @@ import {
 } from "../utils";
 import { LeftCircleFilled, RightCircleFilled } from "@ant-design/icons";
 import { StayDetailInfoButton } from "./HostHomePage";
+import "./css/GuestHomePage.css";
 
 const { Text } = Typography;
 const { TabPane } = Tabs;
@@ -247,21 +248,21 @@ class SearchStays extends React.Component {
       <>
         <Form onFinish={this.search} layout="inline">
           <Form.Item
-            label="Guest Number"
+            label={<label className="form-item-label">Guest Number</label>}
             name="guest_number"
             rules={[{ required: true }]}
           >
             <InputNumber min={1} />
           </Form.Item>
           <Form.Item
-            label="Checkin Date"
+            label={<label className="form-item-label">Checkin Date</label>}
             name="checkin_date"
             rules={[{ required: true }]}
           >
             <DatePicker />
           </Form.Item>
           <Form.Item
-            label="Checkout Date"
+            label={<label className="form-item-label">Checkout Date</label>}
             name="checkout_date"
             rules={[{ required: true }]}
           >
