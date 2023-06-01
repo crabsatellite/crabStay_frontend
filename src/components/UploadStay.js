@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Input, InputNumber, Button, message } from "antd";
 import { uploadStay } from "../utils";
+import Background from "./BackGround";
 
 const layout = {
   labelCol: { span: 8 },
@@ -49,46 +50,60 @@ class UploadStay extends React.Component {
 
   render() {
     return (
-      <Form
-        {...layout}
-        name="nest-messages"
-        onFinish={this.handleSubmit}
-        style={{ maxWidth: 1000, margin: "auto" }}
-      >
-        <Form.Item name="name" label="Name" rules={[{ required: true }]}>
-          <Input />
-        </Form.Item>
-        <Form.Item name="address" label="Address" rules={[{ required: true }]}>
-          <Input />
-        </Form.Item>
-        <Form.Item
-          name="description"
-          label="Description"
-          rules={[{ required: true }]}
+      <div className="host-page">
+        <Form
+          {...layout}
+          name="nest-messages"
+          onFinish={this.handleSubmit}
+          style={{ maxWidth: 1000, margin: "auto" }}
         >
-          <Input.TextArea autoSize={{ minRows: 2, maxRows: 6 }} />
-        </Form.Item>
-        <Form.Item
-          name="guest_number"
-          label="Guest Number"
-          rules={[{ required: true, type: "number", min: 1 }]}
-        >
-          <InputNumber />
-        </Form.Item>
-        <Form.Item name="picture" label="Picture" rules={[{ required: true }]}>
-          <input
-            type="file"
-            accept="image/png, image/jpeg"
-            ref={this.fileInputRef}
-            multiple={true}
-          />
-        </Form.Item>
-        <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-          <Button type="primary" htmlType="submit" loading={this.state.loading}>
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
+          <Form.Item name="name" label="Name" rules={[{ required: true }]}>
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="address"
+            label="Address"
+            rules={[{ required: true }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="description"
+            label="Description"
+            rules={[{ required: true }]}
+          >
+            <Input.TextArea autoSize={{ minRows: 2, maxRows: 6 }} />
+          </Form.Item>
+          <Form.Item
+            name="guest_number"
+            label="Guest Number"
+            rules={[{ required: true, type: "number", min: 1 }]}
+          >
+            <InputNumber />
+          </Form.Item>
+          <Form.Item
+            name="picture"
+            label="Picture"
+            rules={[{ required: true }]}
+          >
+            <input
+              type="file"
+              accept="image/png, image/jpeg"
+              ref={this.fileInputRef}
+              multiple={true}
+            />
+          </Form.Item>
+          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
+            <Button
+              type="primary"
+              htmlType="submit"
+              loading={this.state.loading}
+            >
+              Submit
+            </Button>
+          </Form.Item>
+        </Form>
+      </div>
     );
   }
 }

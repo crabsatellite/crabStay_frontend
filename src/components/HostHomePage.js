@@ -19,6 +19,7 @@ import Text from "antd/lib/typography/Text";
 import React from "react";
 import { deleteStay, getStaysByHost, getReservationsByStay } from "../utils";
 import UploadStay from "./UploadStay";
+import Background from "./BackGround";
 
 const { TabPane } = Tabs;
 
@@ -301,14 +302,20 @@ class MyStays extends React.Component {
 class HostHomePage extends React.Component {
   render() {
     return (
-      <Tabs defaultActiveKey="1" destroyInactiveTabPane={true}>
-        <TabPane tab="My Stays" key="1">
-          <MyStays />
-        </TabPane>
-        <TabPane tab="Upload Stay" key="2">
-          <UploadStay />
-        </TabPane>
-      </Tabs>
+      <div className="host-home-page">
+        <Background
+          videoSource={`https://personalwebpage-videos.s3.us-east-2.amazonaws.com/crab_stay_host_background.mp4`}
+          posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_host_background_poster.jpg`}
+        />
+        <Tabs defaultActiveKey="1" destroyInactiveTabPane={true}>
+          <TabPane tab="My Stays" key="1">
+            <MyStays />
+          </TabPane>
+          <TabPane tab="Upload Stay" key="2">
+            <UploadStay />
+          </TabPane>
+        </Tabs>
+      </div>
     );
   }
 }
