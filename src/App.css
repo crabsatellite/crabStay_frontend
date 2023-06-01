@@ -39,7 +39,7 @@
 
 .header-title {
   /* 适应大屏幕的样式 */
-  font-size: 3vw; /* 字体大小为视窗宽度的3% */
+  background-color: rgb(49, 60, 69) !important;
 }
 
 @media (max-width: 600px) {

@@ -4,6 +4,7 @@ import React from "react";
 import LoginPage from "./components/LoginPage";
 import HostHomePage from "./components/HostHomePage";
 import GuestHomePage from "./components/GuestHomePage";
+import "./App.css";
 
 const { Header, Content } = Layout;
 
@@ -68,6 +69,7 @@ class App extends React.Component {
             justifyContent: "space-between",
             zIndex: 1,
             width: "100%",
+            opacity: 0.9,
           }}
           className="header-title"
         >
