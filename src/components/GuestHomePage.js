@@ -279,6 +279,7 @@ class SearchStays extends React.Component {
               loading={this.state.loading}
               type="primary"
               htmlType="submit"
+              className="submit-button"
             >
               Submit
             </Button>
