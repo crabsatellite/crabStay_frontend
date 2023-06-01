@@ -57,33 +57,37 @@ class UploadStay extends React.Component {
           onFinish={this.handleSubmit}
           style={{ maxWidth: 1000, margin: "auto" }}
         >
-          <Form.Item name="name" label="Name" rules={[{ required: true }]}>
+          <Form.Item
+            name="name"
+            label={<label className="form-item-label">Name</label>}
+            rules={[{ required: true }]}
+          >
             <Input />
           </Form.Item>
           <Form.Item
             name="address"
-            label="Address"
+            label={<label className="form-item-label">Address</label>}
             rules={[{ required: true }]}
           >
             <Input />
           </Form.Item>
           <Form.Item
             name="description"
-            label="Description"
+            label={<label className="form-item-label">Description</label>}
             rules={[{ required: true }]}
           >
             <Input.TextArea autoSize={{ minRows: 2, maxRows: 6 }} />
           </Form.Item>
           <Form.Item
             name="guest_number"
-            label="Guest Number"
+            label={<label className="form-item-label">Guest Number</label>}
             rules={[{ required: true, type: "number", min: 1 }]}
           >
             <InputNumber />
           </Form.Item>
           <Form.Item
             name="picture"
-            label="Picture"
+            label={<label className="form-item-label">Picture</label>}
             rules={[{ required: true }]}
           >
             <input
@@ -91,6 +95,8 @@ class UploadStay extends React.Component {
               accept="image/png, image/jpeg"
               ref={this.fileInputRef}
               multiple={true}
+              // white font
+              style={{ color: "white" }}
             />
           </Form.Item>
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
