@@ -19,7 +19,12 @@ import {
   bookStay,
   cancelReservation,
 } from "../utils";
-import { LeftCircleFilled, RightCircleFilled } from "@ant-design/icons";
+import {
+  LeftCircleFilled,
+  RightCircleFilled,
+  SearchOutlined,
+  CalendarOutlined,
+} from "@ant-design/icons";
 import { StayDetailInfoButton } from "./HostHomePage";
 import "./css/GuestHomePage.css";
 
@@ -332,10 +337,26 @@ class GuestHomePage extends React.Component {
   render() {
     return (
       <Tabs defaultActiveKey="1" destroyInactiveTabPane={true}>
-        <TabPane tab="Search Stays" key="1">
+        <TabPane
+          tab={
+            <span>
+              <SearchOutlined />
+              Search Stays
+            </span>
+          }
+          key="1"
+        >
           <SearchStays />
         </TabPane>
-        <TabPane tab="My Reservations" key="2">
+        <TabPane
+          tab={
+            <span>
+              <CalendarOutlined />
+              My Reservations
+            </span>
+          }
+          key="2"
+        >
           <MyReservations />
         </TabPane>
       </Tabs>
