@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Button, Input, Space, Checkbox, message } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { login, register } from "../utils";
+import Background from "./BackGround";
 import "./css/LoginPage.css";
 
 class LoginPage extends React.Component {
@@ -82,6 +83,10 @@ class LoginPage extends React.Component {
           height: "100%",
         }}
       >
+        <Background
+          videoSource={`https://personalwebpage-videos.s3.us-east-2.amazonaws.com/crab_stay_login_background.mp4`}
+          posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_login_background_poster.jpg`}
+        />
         <div style={{ width: 500 }}>
           <Form
             ref={this.formRef}

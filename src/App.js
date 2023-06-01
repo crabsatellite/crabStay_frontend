@@ -4,7 +4,6 @@ import React from "react";
 import LoginPage from "./components/LoginPage";
 import HostHomePage from "./components/HostHomePage";
 import GuestHomePage from "./components/GuestHomePage";
-import Background from "./components/BackGround";
 
 const { Header, Content } = Layout;
 
@@ -63,10 +62,6 @@ class App extends React.Component {
   render() {
     return (
       <Layout style={{ height: "100vh" }}>
-        <Background
-          videoSource={`https://personalwebpage-videos.s3.us-east-2.amazonaws.com/crab_stay_login_background.mp4`}
-          posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_login_background_poster.jpg`}
-        />
         <Header
           style={{
             display: "flex",
