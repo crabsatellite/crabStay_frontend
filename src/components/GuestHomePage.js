@@ -106,6 +106,25 @@ class MyReservations extends React.Component {
         style={{ width: 1000, margin: "auto" }}
         loading={this.state.loading}
         dataSource={this.state.data}
+        locale={{
+          emptyText: (
+            <div style={{ textAlign: "center" }}>
+              <img
+                src={`${process.env.PUBLIC_URL}/images/empty.png`}
+                alt="empty"
+                style={{ width: 50, height: 50 }}
+              ></img>
+              <div
+                style={{
+                  color: "#fff",
+                  fontFamily: "Courier New",
+                }}
+              >
+                No Data
+              </div>
+            </div>
+          ),
+        }}
         renderItem={(item) => (
           <List.Item
             actions={[
