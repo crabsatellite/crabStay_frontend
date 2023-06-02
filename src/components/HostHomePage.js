@@ -14,6 +14,8 @@ import {
   LeftCircleFilled,
   RightCircleFilled,
   InfoCircleOutlined,
+  HomeOutlined,
+  UploadOutlined,
 } from "@ant-design/icons";
 import Text from "antd/lib/typography/Text";
 import React from "react";
@@ -328,10 +330,26 @@ class HostHomePage extends React.Component {
           posterSource={`${process.env.PUBLIC_URL}/images/crab_stay_host_background_poster.jpg`}
         />
         <Tabs defaultActiveKey="1" destroyInactiveTabPane={true}>
-          <TabPane tab="My Stays" key="1">
+          <TabPane
+            tab={
+              <span>
+                <HomeOutlined />
+                My Stays
+              </span>
+            }
+            key="1"
+          >
             <MyStays />
           </TabPane>
-          <TabPane tab="Upload Stay" key="2">
+          <TabPane
+            tab={
+              <span>
+                <UploadOutlined />
+                Upload Stay
+              </span>
+            }
+            key="2"
+          >
             <UploadStay />
           </TabPane>
         </Tabs>
