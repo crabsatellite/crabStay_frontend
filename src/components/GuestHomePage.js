@@ -297,6 +297,25 @@ class SearchStays extends React.Component {
             xl: 4,
             xxl: 4,
           }}
+          locale={{
+            emptyText: (
+              <div style={{ textAlign: "center" }}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/empty.png`}
+                  alt="empty"
+                  style={{ width: 50, height: 50 }}
+                ></img>
+                <div
+                  style={{
+                    color: "#fff",
+                    fontFamily: "Courier New",
+                  }}
+                >
+                  No Data
+                </div>
+              </div>
+            ),
+          }}
           dataSource={this.state.data}
           renderItem={(item) => (
             <List.Item>
