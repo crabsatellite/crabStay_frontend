@@ -134,16 +134,27 @@ class MyReservations extends React.Component {
               />,
             ]}
           >
-            <List.Item.Meta
-              title={<Text>{item.stay.name}</Text>}
-              description={
-                <>
-                  <Text>Checkin Date: {item.checkin_date}</Text>
-                  <br />
-                  <Text>Checkout Date: {item.checkout_date}</Text>
-                </>
-              }
-            />
+            <Card
+              style={{
+                width: "100%",
+                backgroundColor: "#f0f0f0",
+                opacity: 0.9,
+                borderRadius: 10,
+              }}
+            >
+              {" "}
+              {/* add Card component here, you can customize the style */}
+              <List.Item.Meta
+                title={<Text>{item.stay.name}</Text>}
+                description={
+                  <>
+                    <Text>Checkin Date: {item.checkin_date}</Text>
+                    <br />
+                    <Text>Checkout Date: {item.checkout_date}</Text>
+                  </>
+                }
+              />
+            </Card>
           </List.Item>
         )}
       />
