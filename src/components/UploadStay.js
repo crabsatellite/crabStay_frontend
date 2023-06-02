@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Input, InputNumber, Button, message } from "antd";
 import { uploadStay } from "../utils";
+import "./css/UploadStay.css";
 
 const layout = {
   labelCol: { span: 8 },
@@ -103,6 +104,7 @@ class UploadStay extends React.Component {
               type="primary"
               htmlType="submit"
               loading={this.state.loading}
+              className="upload-stay-button"
             >
               Submit
             </Button>
