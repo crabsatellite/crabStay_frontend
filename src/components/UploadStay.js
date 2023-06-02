@@ -55,7 +55,7 @@ class UploadStay extends React.Component {
           {...layout}
           name="nest-messages"
           onFinish={this.handleSubmit}
-          style={{ maxWidth: 1000, margin: "auto" }}
+          style={{ maxWidth: 1000, margin: "auto", opacity: 0.9 }}
         >
           <Form.Item
             name="name"
