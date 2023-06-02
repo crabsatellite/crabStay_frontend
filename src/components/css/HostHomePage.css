@@ -1,6 +1,7 @@
 .host-home-page .ant-tabs-tab {
   color: white;
   font-size: medium;
+  opacity: 0.8;
 }
 
 .host-home-page .ant-tabs-tab-active {
