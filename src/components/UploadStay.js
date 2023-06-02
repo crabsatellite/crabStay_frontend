@@ -1,7 +1,6 @@
 import React from "react";
 import { Form, Input, InputNumber, Button, message } from "antd";
 import { uploadStay } from "../utils";
-import Background from "./BackGround";
 
 const layout = {
   labelCol: { span: 8 },
